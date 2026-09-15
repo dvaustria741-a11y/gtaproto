@@ -1,0 +1,19 @@
+{
+  "name": "neon-district-mobile",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Procedural Three.js open-world driving prototype packaged with Capacitor.",
+  "type": "module",
+  "scripts": {
+    "android:add": "cap add android",
+    "android:sync": "cap sync android",
+    "android:open": "cap open android"
+  },
+  "dependencies": {
+    "@capacitor/android": "6.1.2",
+    "@capacitor/core": "6.1.2"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "6.1.2"
+  }
+}

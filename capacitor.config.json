@@ -1,0 +1,6 @@
+{
+  "appId": "com.gtaproto.app",
+  "appName": "Neon District",
+  "webDir": "www",
+  "bundledWebRuntime": false
+}
