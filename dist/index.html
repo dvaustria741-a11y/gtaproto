@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#071219" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>COASTLINE</title>
+    <script type="module" crossorigin src="./assets/index-Dwe_hWpS.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CyjLczdT.css">
+  </head>
+  <body>
+    <main id="game-root" aria-label="COASTLINE game">
+      <canvas id="game-canvas"></canvas>
+      <div id="loading-screen" class="loading-screen">
+        <div class="loading-mark">COASTLINE</div>
+        <div class="loading-subtitle">A living city at the edge of the sun</div>
+        <div class="loading-track"><span id="loading-bar"></span></div>
+        <div id="loading-status">WARMING THE HORIZON</div>
+      </div>
+
+      <section id="main-menu" class="screen-panel hidden">
+        <div class="menu-backdrop"></div>
+        <div class="menu-content">
+          <div class="eyebrow">WELCOME TO</div>
+          <h1>COASTLINE</h1>
+          <p class="menu-tagline">Follow the tide. Find your own route.</p>
+          <div class="menu-actions">
+            <button class="menu-button primary" data-action="play">PLAY</button>
+            <button class="menu-button" data-action="continue">CONTINUE</button>
+            <button class="menu-button" data-action="settings">SETTINGS</button>
+            <button class="menu-button" data-action="controls">CONTROLS</button>
+          </div>
+          <div class="menu-foot">ORIGINAL PROCEDURAL WORLD &nbsp;•&nbsp; v1.0</div>
+        </div>
+      </section>
+
+      <section id="pause-menu" class="screen-panel hidden compact-panel">
+        <div class="menu-content">
+          <div class="eyebrow">GAME PAUSED</div>
+          <h2>TAKE A BREATH</h2>
+          <div class="menu-actions">
+            <button class="menu-button primary" data-action="resume">RESUME</button>
+            <button class="menu-button" data-action="settings">SETTINGS</button>
+            <button class="menu-button" data-action="restart">RESTART</button>
+            <button class="menu-button" data-action="main-menu">MAIN MENU</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="settings-panel" class="modal-panel hidden">
+        <div class="modal-card">
+          <div class="modal-heading"><span>SETTINGS</span><button class="close-button" data-action="close-settings">×</button></div>
+          <div id="settings-list" class="settings-list"></div>
+        </div>
+      </section>
+
+      <section id="controls-panel" class="modal-panel hidden">
+        <div class="modal-card controls-card">
+          <div class="modal-heading"><span>CONTROLS</span><button class="close-button" data-action="close-controls">×</button></div>
+          <div class="control-columns">
+            <div><h3>ON FOOT</h3><p><b>WASD</b> Move</p><p><b>SHIFT</b> Sprint</p><p><b>SPACE</b> Jump</p><p><b>CTRL</b> Crouch</p><p><b>E</b> Interact / Enter</p></div>
+            <div><h3>IN VEHICLE</h3><p><b>WASD</b> Drive</p><p><b>SPACE</b> Handbrake</p><p><b>E</b> Exit vehicle</p><p><b>MOUSE</b> Look around</p><p><b>ESC</b> Pause</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="hud" class="hud hidden">
+        <div class="hud-top">
+          <div class="brand-chip"><span class="brand-dot"></span> COASTLINE</div>
+          <div class="mission-chip"><span class="eyebrow">CURRENT OBJECTIVE</span><strong id="mission-objective">Explore the waterfront</strong></div>
+          <div class="status-stack"><span id="clock-readout">08:42</span><span id="weather-readout">CLEAR</span></div>
+        </div>
+        <div class="hud-bottom">
+          <div class="vitals-card">
+            <div class="vital-line"><span>HP</span><div class="meter"><i id="health-meter"></i></div><b id="health-value">100</b></div>
+            <div class="vital-line"><span>ST</span><div class="meter stamina"><i id="stamina-meter"></i></div><b id="stamina-value">100</b></div>
+            <div class="money-line"><span>$</span><strong id="money-value">2,450</strong></div>
+          </div>
+          <div class="minimap-wrap"><canvas id="minimap" width="180" height="180"></canvas><div class="map-label">LIVE MAP</div></div>
+          <div class="vehicle-card hidden" id="vehicle-card"><span id="vehicle-name">SOLARIS GT</span><strong><em id="speed-value">0</em> KM/H</strong><div class="speed-meter"><i id="speed-meter"></i></div></div>
+        </div>
+        <div id="interaction-prompt" class="interaction-prompt hidden">E &nbsp; <span>INTERACT</span></div>
+        <div id="toast" class="toast hidden"></div>
+        <div id="fps-counter" class="fps-counter hidden">30 FPS</div>
+      </section>
+
+      <div id="touch-controls" class="touch-controls hidden">
+        <div id="move-stick" class="virtual-stick"><div class="stick-ring"></div><div class="stick-knob"></div></div>
+        <div id="look-pad" class="look-pad"></div>
+        <div class="touch-actions left-actions"><button class="touch-button" data-control="crouch">CROUCH</button></div>
+        <div class="touch-actions right-actions">
+          <button class="touch-button round" data-control="jump">JUMP</button>
+          <button class="touch-button round accent" data-control="sprint">RUN</button>
+          <button class="touch-button interact-touch" data-control="interact">ENTER</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
