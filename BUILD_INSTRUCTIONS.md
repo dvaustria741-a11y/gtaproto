@@ -1,6 +1,7 @@
 # Build COASTLINE on GitHub
 
 1. Unzip the project and upload the contents to a new GitHub repository.
+   If updating an existing repository, replace `.github/workflows/android.yml` with the copy from this ZIP before rerunning the workflow.
 2. Open the repository's **Actions** tab.
 3. Select **Build COASTLINE Android APK**.
 4. Choose **Run workflow**.
