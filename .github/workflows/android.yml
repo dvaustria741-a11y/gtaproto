@@ -44,6 +44,7 @@ jobs:
         with:
           accept-android-sdk-licenses: true
           log-accepted-android-sdk-licenses: true
+          packages: ''
 
       - name: Install Android SDK components
         run: |
