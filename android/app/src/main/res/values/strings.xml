@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">COASTLINE</string>
+    <string name="title_activity_main">COASTLINE</string>
+    <string name="package_name">com.coastline.openworld</string>
+    <string name="custom_url_scheme">com.coastline.openworld</string>
+</resources>

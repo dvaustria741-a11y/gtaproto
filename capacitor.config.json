@@ -1,6 +1,9 @@
 {
-  "appId": "com.gtaproto.app",
-  "appName": "Neon District",
-  "webDir": "www",
-  "bundledWebRuntime": false
+  "appId": "com.coastline.openworld",
+  "appName": "COASTLINE",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https"
+  }
 }
